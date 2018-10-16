@@ -1,3 +1,5 @@
+var uid = new Date().getTime() + '_' + Math.floor((Math.random() * 1000) + 1);
+
 function janecekCall() {
 
   var plusJanecci = 0,
@@ -68,5 +70,18 @@ function hlasovani(system) {
   button.disabled = true;
   button.style.opacity = 0.5;
 
-  return vysledky;
+  $.ajax({
+    url: encodeURI('https://mzj6uoe3y2.execute-api.eu-central-1.amazonaws.com/prod?vals=' + JSON.stringify({ 
+      "uid": uid, "results": vysledky
+    })),
+    type: "GET",
+    crossDomain: !0,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    dataType: "json",
+    success: function (response) {
+      return
+    }
+  });
 }
