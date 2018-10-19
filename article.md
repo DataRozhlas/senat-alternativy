@@ -4,7 +4,7 @@ published: "21. dubna 2018"
 coverimg: https://interaktivni.rozhlas.cz/brexit/media/cover.jpg
 coverimg_note: "Foto <a href='#'>ČTK</a>"
 styles: []
-libraries: [jquery]
+libraries: [jquery, highcharts, 'https://code.highcharts.com/modules/sankey.js']
 options: [] #wide, noheader (, nopic)
 ---
 
@@ -313,3 +313,9 @@ Je to prosté, stačí do <span style="background-color: #2171b5;color: white;di
 
 </div>
 </wide>
+
+<wide><div id="trebic12" style="max-width: 100%; height: 600px"></div></wide>
+
+<wide><div id="trebic34" style="max-width: 100%; height: 500px"></div></wide>
+
+<wide><div id="trebic57" style="max-width: 100%; height: 400px"></div></wide>
